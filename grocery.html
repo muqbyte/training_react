@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <p>Please add your item</p>
+        <input type="text" placeholder="Item" id="getItem">
+        <button onclick="saveButton()">SAVE</button>
+    </div>
+
+        
+        <ul id="itemList">
+
+        </ul>
+ 
+
+    <style>
+        .container{
+            border: black solid 2px;
+        }
+    </style>
+
+    <script>
+        let getItemList=document.getElementById("getItem");
+        let display=document.getElementById("itemList");
+
+
+
+
+
+        let saveButton =()=>{
+
+            if (getItemList.value===""){
+                alert("Please enter something");
+            }
+            else{
+                let li= document.createElement("li");
+                li.innerHTML=getItemList.value;
+                display.appendChild(li);
+            }
+            getItemList.value="";
+
+        }
+    </script>
+</body>
+</html>

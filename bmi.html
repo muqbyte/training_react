@@ -13,15 +13,12 @@
         <input type="text" id="getHeight">
         <label  >Weight kg</label>
         <input type="text" id="getWeight">
-        <button onclick="bmiCalculate()">Calculate</button>
+        <button onclick="bmiCalculate2()">Calculate</button>
         <p id="result"></p>
 
     </div>
     <script>
-        
-       
-
-        function bmiCalculate(){
+        let bmiCalculate2 = function(){
             let personHeight=document.getElementById("getHeight").value;
             let personWeight=document.getElementById("getWeight").value;
             let cmHeight=(personHeight/100)*(personHeight/100);
@@ -32,8 +29,37 @@
 
            
                 document.getElementById("result").innerHTML=measure;
+        }
+        
+        
+        //arrow function
+    //    let bmiCalculate2=()=>{
+    //     let personHeight=document.getElementById("getHeight").value;
+    //         let personWeight=document.getElementById("getWeight").value;
+    //         let cmHeight=(personHeight/100)*(personHeight/100);
+    //         let bmi=personWeight/cmHeight;
+    //         let measure=bmi;
             
-        }       
+           
+
+           
+    //             document.getElementById("result").innerHTML=measure;
+            
+    //    }
+//normal function
+        // function bmiCalculate(){
+        //     let personHeight=document.getElementById("getHeight").value;
+        //     let personWeight=document.getElementById("getWeight").value;
+        //     let cmHeight=(personHeight/100)*(personHeight/100);
+        //     let bmi=personWeight/cmHeight;
+        //     let measure=bmi;
+            
+           
+
+           
+        //         document.getElementById("result").innerHTML=measure;
+            
+        // }       
     </script>
 </body>
 </html>
