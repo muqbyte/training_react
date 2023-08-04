@@ -13,9 +13,11 @@
     </div>
 
         
-        <ul id="itemList">
+        <!-- <ul id="itemList">
 
-        </ul>
+        </ul> -->
+        
+        <p id="itemList"></p>
  
 
     <style>
@@ -25,24 +27,37 @@
     </style>
 
     <script>
-        let getItemList=document.getElementById("getItem");
-        let display=document.getElementById("itemList");
+       
+   
 
-
-
+        let information=[];
 
 
         let saveButton =()=>{
+            ///////method 2
+            let getItemList=document.getElementById("getItem").value;
+            let display=document.getElementById("itemList");
+            let firstItem=information.push(getItemList);
+            console.log(information);
+            display.innerHTML=information;
 
-            if (getItemList.value===""){
-                alert("Please enter something");
-            }
-            else{
-                let li= document.createElement("li");
-                li.innerHTML=getItemList.value;
-                display.appendChild(li);
-            }
-            getItemList.value="";
+
+            // information.forEach((n)=>{
+            // console.log(n);
+            
+            // })
+
+
+            //////method 1
+            // if (getItemList.value===""){
+            //     alert("Please enter something");
+            // }
+            // else{
+            //     let li= document.createElement("li");
+            //     li.innerHTML=getItemList.value;
+            //     display.appendChild(li);
+            // }
+            getItemList="";
 
         }
     </script>
